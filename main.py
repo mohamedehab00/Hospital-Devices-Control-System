@@ -18,7 +18,7 @@ add_button_image = PhotoImage(file=r'.\\Images\\add.png')
 delete_button_image = PhotoImage(file=r'.\\Images\\delete.png')
 search_button_image = PhotoImage(file=r'.\\Images\\search.png')
 history_button_image = PhotoImage(file=r'.\\Images\\history.png')
-Repairs = PhotoImage(file=r'.\\Images\\task-done.png')
+Repairs = PhotoImage(file=r'.\\Images/repair.png')
 
 label_space1 = Label(root).grid(row=2, column=0, pady=20, padx=10)
 label_space2 = Label(root).grid(row=4, column=0, pady=20, padx=10)
