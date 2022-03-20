@@ -4,6 +4,7 @@ from LogOperations import editLogFile
 import dateutil.parser as parser
 import numpy as np
 from tkinter import messagebox
+import os
 
 
 def empty_entry(entry):
@@ -101,3 +102,6 @@ def searchLabelsData(Entry, labels, msg):
     else:
         setSearchLabels(labels, data)
         msg.showerror("Error", "Serial Not Found")
+
+def check_Exist(parentPath, File_Name):
+    return os.path.isfile(parentPath + File_Name + ".xlsx")

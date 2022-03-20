@@ -2,8 +2,8 @@ from tkinter import *
 from functools import partial
 from tkinter import messagebox
 import LogOperations
-from GeneralMethods import edit_history_info
-from ExcelOperations import checkSerialExist, check_Exist
+from GeneralMethods import edit_history_info, check_Exist
+from ExcelOperations import checkSerialExist
 from LogOperations import openLogFile
 from tkcalendar import DateEntry
 
@@ -77,12 +77,11 @@ def create_new_page(serial):
 
     button_get_history_data.grid(row=6, column=1)
 
-
 def print_history(entry, msg):
     try:
-        if entry.get() == "" or check_Exist(LogOperations.Main_LOG_Folder_Name + entry.get() + ".log"):
+        if entry.get() == "":
             raise ValueError
         else:
             openLogFile(entry.get())
     except ValueError:
-        msg.showerror("Error", "Must enter the serial")
+        msg.showerror("Error", "Serial Not Found!!!")

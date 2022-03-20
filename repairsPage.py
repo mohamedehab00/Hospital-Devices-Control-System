@@ -30,24 +30,9 @@ def repairWindow():
 
 def get_devices(entry):
     data = getUpcoming(entry.get())
-    if data[0]:
-        root = Tk()
-        root.geometry("1000x1000")
-        root.title("Upcoming Repairs")
-
-        scrollbar = Scrollbar(root)
-        scrollbar.pack(side=RIGHT, fill=Y)
-        mylist = Listbox(root, yscrollcommand=scrollbar.set, width=1000)
-
-        for i in data[1]:
-            row = ""
-            for key in i.keys():
-                row += str(i[key]) + "      "
-            mylist.insert(END, row)
-            mylist.insert(END, "\n")
-        mylist.pack(side=LEFT, fill=BOTH)
-        scrollbar.config(command=mylist.yview)
-
+    if data:
+        msg = messagebox
+        msg.showinfo("Done", "File Generated!!!")
     else:
         msg = messagebox
         msg.showerror("Error", "No Devices")
