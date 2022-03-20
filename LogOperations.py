@@ -47,6 +47,7 @@ def editLogFile(serial, data, msg):
 
 
 def openLogFile(serial):
+    print(EO.checkSerialExist(serial)[0])
     if EO.checkSerialExist(serial)[0]:
         raise ValueError
     else:

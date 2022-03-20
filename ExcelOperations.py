@@ -15,7 +15,7 @@ def checkSerialExist(serial):
         cond = df["SerialNo"] == serial
         result = df[cond].index
         res = len(result)
-
+        print(res)
         if res > 0:
             return [False, result]
         else:
