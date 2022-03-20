@@ -1,8 +1,7 @@
 from tkinter import *
 from functools import partial
 from tkinter import messagebox
-import LogOperations
-from GeneralMethods import edit_history_info, check_Exist
+from GeneralMethods import edit_history_info
 from ExcelOperations import checkSerialExist
 from LogOperations import openLogFile
 from tkcalendar import DateEntry

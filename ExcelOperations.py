@@ -9,9 +9,6 @@ DB_Cols = ["DeviceName", "ModelType", "Department", "FloorNo", "Manufacture", "A
            "WarrantyPeriod", "InstallationDate", "PPM", "ppmPeriod", "firstPPM", "secondPPM", "thirdPPM", "fourthPPM"]
 
 
-
-
-
 def checkSerialExist(serial):
     try:
         df = pd.read_excel(Main_DB_Folder_Name + Main_DB_File_Name + ".xlsx", dtype={"SerialNo": str})
